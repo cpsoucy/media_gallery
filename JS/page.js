@@ -39,3 +39,15 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
+
+function navToggle() {
+  let siteNav = document.getElementById('site-nav');
+  let trigram = document.getElementById('trigram');
+  if (siteNav.className === 'nav-wrap') {
+    siteNav.classList.add('mobile');
+    trigram.classList.add('tri-mobile');
+  } else {
+    siteNav.classList = 'nav-wrap';
+    trigram.classList = 'nav-link';
+  }
+}
