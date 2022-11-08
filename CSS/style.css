@@ -3,8 +3,8 @@
     --dark: rgb(207, 204, 204); /* text color*/
     --ltmid: rgb(65, 64, 64); /* accent color (divider color, main arrow color) */
     --dkmid: #999; /* dotted border color */
-    --light: #413a3a; /* picture background color */
-    --accent: #6495ed; /* Idk what this does */
+    --light: #443737; /* picture background color */
+    --accent: #6495ed;
   }
   body {
     background-color: rgb(51, 50, 50);
@@ -12,7 +12,7 @@
     line-height: 1.4; /*-- sets body default line height --*/
   }
   /*-- default styles for links (in the correct order) --*/
-  a {color: var(--accent); font-weight: 500; text-decoration: none; transition: all .2s ease-in-out;}
+
   a:visited {color:#305eb3;}
   a:hover {color: var(--accent);}
   a:active {color: var(--dkmid);}
@@ -30,6 +30,7 @@
     flex-basis: 30%; /*-- gives this flex child an ideal width --*/
     display: flex; /*-- makes the child also a flex container --*/
     justify-content: space-between; /*-- main axis space distribution --*/
+    color: var(--accent); font-weight: 500; text-decoration: none; transition: all .2s ease-in-out;
   }
   a.nav-link { /*-- targets individual links --*/
     padding-left: 2.8rem; /*-- sets some minimum padding --*/
@@ -74,7 +75,7 @@
     position: absolute; /*-- positions arrows absolutely--*/
     width: auto; /*-- matches width of parent --*/
     top: 40%; /*-- positions arrows from parent top --*/
-    color: var(--ltmid); /*-- arrow color --*/
+    color: var(--dkmid);
     background-color: transparent; /*-- hides button background --*/
     border: none; /*-- removes default button border --*/
     font-weight: 800; /*-- selects heavier font --*/
@@ -91,6 +92,12 @@
     right: 1rem; /*-- positions second arrow to the right --*/
   }
   
+  .slideshow_wrapper {
+    position: relative;
+    margin: auto;
+     max-width: 100%;
+  }
+
   .hero {
     padding: 4rem 0; /*-- top and bottom padding for the container --*/
     display: flex; /*-- declares a flex container --*/
