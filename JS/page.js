@@ -6,7 +6,7 @@
 
 // a test function that runs when the button is clicked
 function sampleFunction() {
-    alert("You clicked the button");
+    alert("Pretend this is a modal image :)");
   }
 
   let slideIndex = 1;
