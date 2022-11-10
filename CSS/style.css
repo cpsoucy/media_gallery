@@ -21,7 +21,7 @@
     background-color: var(--ltmid); /*-- nav background --*/
     padding: 1rem 2rem 1rem 0; /*-- inside padding --*/
     display: flex; /*-- header bar is a flex container --*/
-    min-height: 5rem; /*-- header bar has a minimum height --*/
+    min-height: 4rem; /*-- header bar has a minimum height --*/
     justify-content: space-between; /*-- main axis space distribution --*/
     align-items: center; /*-- cross axis space distribution --*/
     position: relative; /*-- needed to absolutly position some children --*/
@@ -59,6 +59,15 @@
   main {
     padding: 1rem 2rem; /*-- adds inside space around the main content area --*/
   }
+
+  .container {
+    position: relative;
+    margin: auto;
+    max-width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
   .slideshow { /*-- replace these styles with your slideshow styles --*/
     display: flex; /*-- declares a flex container --*/
     justify-content: center; /*-- center in the main axis --*/
@@ -74,7 +83,7 @@
     cursor: pointer; /*-- changes hover cursor to the hand --*/
     position: absolute; /*-- positions arrows absolutely--*/
     width: auto; /*-- matches width of parent --*/
-    top: 40%; /*-- positions arrows from parent top --*/
+    top: 28%; /*-- positions arrows from parent top --*/
     color: var(--dkmid);
     background-color: transparent; /*-- hides button background --*/
     border: none; /*-- removes default button border --*/
@@ -90,12 +99,6 @@
   }
   .controls button:nth-child(2) {
     right: 1rem; /*-- positions second arrow to the right --*/
-  }
-  
-  .slideshow_wrapper {
-    position: relative;
-    margin: auto;
-     max-width: 100%;
   }
 
   .hero {
@@ -169,41 +172,6 @@
     font-weight: 500; /*-- mid-weight font --*/
   }
 
-  @media screen and (max-width: 675px) { /*-- at slightly larger size, there are two equal columns --*/
-      .nav-wrap {
-        display: none;
-      }
-      .nav-wrap.mobile {
-        position:absolute;
-        z-index: 10;
-        top: 7rem;
-        right: 0;
-        width: 100%;
-        padding: 0 2rem 2rem 2rem;
-        background: var(--ltmid);
-        display: flex; 
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: space-around;
-      }
-      .nav-wrap.mobile a {
-        display: block;
-        width: 100%;
-        text-align: right;
-        padding: 2rem 2rem;
-        margin: 0;
-      }
-      .nav-wrap.mobile a:hover {
-        background-color: var(--light);
-      }
-      a#trigram {
-        display: inherit;
-      }
-      a#trigram.tri-mobile::before {
-        content: '\00D7';
-      }
-    }
-
   .numbertext {
     color: #f2f2f2;
     font-size: 12px;
@@ -235,6 +203,7 @@
   /* Add a transparency effect for thumnbail images */
   .demo {
     opacity: 0.4;
+    -webkit-filter: grayscale(100%); 
   }
   
   .active,
@@ -252,4 +221,250 @@
     position: relative;
     padding-left: 2.5%;
     padding-top: 1.5%;
+  }
+
+  @media screen and (max-width: 1750px) {
+    main {
+      padding: 0;
+    }
+    .mySlides {
+      width: 90%;
+      padding-left: 5%;
+    }
+    .controls button {
+      top: 20%;
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+    .controls button:nth-child(1) {
+      left: 0.5rem; 
+    }
+    .controls button:nth-child(2) {
+      right: 0.5rem; 
+    }
+    .caption-container {
+      margin-left: 0%;
+    }
+    .row {
+      padding-left: 0%;
+    }
+  }
+
+  @media screen and (max-width: 1500px) {
+    main {
+      padding: 0;
+    }
+    .mySlides {
+      width: 90%;
+      padding-left: 5%;
+    }
+    .controls button {
+      top: 20%;
+      padding-left: 0.25em;
+      padding-right: 0.25em;
+    }
+    .controls button:nth-child(1) {
+      left: 0.5rem; 
+    }
+    .controls button:nth-child(2) {
+      right: 0.5rem; 
+    }
+    .caption-container {
+      margin-left: 0%;
+    }
+    .row {
+      padding-left: 0%;
+    }
+  }
+
+  @media screen and (max-width: 1250px) {
+    main {
+      padding: 0;
+    }
+    .mySlides {
+      width: 90%;
+      padding-left: 5%;
+    }
+    .controls button {
+      top: 15%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .controls button:nth-child(1) {
+      left: 0.5rem; 
+    }
+    .controls button:nth-child(2) {
+      right: 0.5rem; 
+    }
+    .caption-container {
+      margin-left: 0%;
+    }
+    .row {
+      padding-left: 0%;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    main {
+      padding: 0;
+    }
+    .mySlides {
+      width: 90%;
+      padding-left: 5%;
+    }
+    .controls button {
+      top: 15%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .controls button:nth-child(1) {
+      left: 0.5rem; 
+    }
+    .controls button:nth-child(2) {
+      right: 0.5rem; 
+    }
+    .caption-container {
+      margin-left: 0%;
+    }
+    .row {
+      padding-left: 0%;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    main {
+      padding: 0;
+    }
+    .mySlides {
+      width: 85%;
+      padding-left: 8%;
+    }
+    .controls button {
+      top: 5%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .controls button:nth-child(1) {
+      left: 0.5rem; 
+    }
+    .controls button:nth-child(2) {
+      right: 0.5rem; 
+    }
+    .caption-container {
+      margin-left: 0%;
+    }
+    .row {
+      padding-left: -2%;
+    }
+  }
+
+  @media screen and (max-width: 675px) {
+    .nav-wrap {
+      display: none;
+    }
+    .nav-wrap.mobile {
+      position:absolute;
+      z-index: 10;
+      top: 7rem;
+      right: 0;
+      width: 100%;
+      padding: 0 2rem 2rem 2rem;
+      background: var(--ltmid);
+      display: flex; 
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-around;
+    }
+    .nav-wrap.mobile a {
+      display: block;
+      width: 100%;
+      text-align: right;
+      padding: 2rem 2rem;
+      margin: 0;
+    }
+    .nav-wrap.mobile a:hover {
+      background-color: var(--light);
+    }
+    a#trigram {
+      display: inherit;
+    }
+    a#trigram.tri-mobile::before {
+      content: '\00D7';
+    }
+
+    main {
+      padding: 0;
+    }
+
+    .container {
+      padding-left: 0em;
+    }
+    .mySlides {
+      width: 75%;
+      padding-left: 13.5%;
+    }
+    .controls button {
+      max-width: 100%;
+      top: -2%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    main {
+      padding: 0;
+    }
+    .caption-container {
+      margin-left: 7%;
+    }
+    .row {
+      padding-left: 7%;
+    }
+    .mySlides {
+      width: 80%;
+    }
+    .container {
+      padding-right: 7%;
+    }
+    .controls button {
+      top:-5%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .controls button:nth-child(1) {
+      left: 0.01%; 
+    }
+    .controls button:nth-child(2) {
+      right: 0.01%; 
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    main {
+      padding: 0;
+    }
+    .mySlides {
+      width: 75%;
+    }
+    .container {
+      padding-left: 5%;
+    }
+    .controls button {
+      top: -15%;
+      padding-left: 4%;
+      padding-right: 4%;
+    }
+    .controls button:nth-child(1) {
+      left: 0.05rem; 
+    }
+    .controls button:nth-child(2) {
+      right: 0.05rem; 
+    }
+    .caption-container {
+      margin-left: 0%;
+    }
+    .row {
+      padding-left: 0%;
+    }
   }
