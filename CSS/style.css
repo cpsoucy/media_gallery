@@ -313,7 +313,7 @@
       padding-left: 5%;
     }
     .controls button {
-      top: 15%;
+      top: 8%;
       padding-left: 0;
       padding-right: 0;
     }
@@ -340,7 +340,7 @@
       padding-left: 8%;
     }
     .controls button {
-      top: 5%;
+      top: 0%;
       padding-left: 0;
       padding-right: 0;
     }
@@ -405,7 +405,7 @@
     }
     .controls button {
       max-width: 100%;
-      top: -2%;
+      top: -8%;
       padding-left: 0;
       padding-right: 0;
     }
@@ -428,7 +428,7 @@
       padding-right: 7%;
     }
     .controls button {
-      top:-5%;
+      top:-15%;
       padding-left: 0;
       padding-right: 0;
     }
@@ -451,7 +451,7 @@
       padding-left: 5%;
     }
     .controls button {
-      top: -15%;
+      top: -20%;
       padding-left: 4%;
       padding-right: 4%;
     }
