@@ -1,16 +1,35 @@
-/* Checklist for page.js:
-    1. Javascript for mobile navigation (the nav bar shrinking down to one item each row)
-    2. Slider animation (?)
-    3. Lightbox modals
-*/
+
 
 // a test function that runs when the button is clicked
-function sampleFunction() {
-    alert("Pretend this is a modal image :)");
-  }
+// function sampleFunction() {
+    // alert("Pretend this is a modal image :)");
+// }
 
-  let slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 
 // Next/previous controls
 function plusSlides(n) {
